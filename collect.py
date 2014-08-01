@@ -10,9 +10,9 @@ request = urllib2.Request(donations_source_url, headers=ONEPERCENT_API_HEADERS)
 response = urllib2.urlopen(request)
 donation_json = response.read()
 
-donations_url = "{0}{1}".format(STREAM_SERVER, '/donations/')
+donations_url = "{0}{1}".format(STREAM_SERVER, '/api/donations/')
 request = urllib2.Request(donations_url, donation_json, {'Content-Type': 'application/json'})
-urllib2.urlopen(request)
+urllib2.urlopen(request).read()
 
 # donations_stream_url = "{0}{1}".format(STREAM_SERVER, '/donations/')
 # urllib2.Request()
