@@ -12,7 +12,8 @@ donation_json = response.read()
 
 donations_url = "{0}{1}".format(STREAM_SERVER, '/api/donations/')
 request = urllib2.Request(donations_url, donation_json, {'Content-Type': 'application/json'})
-urllib2.urlopen(request).read()
+
+print urllib2.urlopen(request).read()
 
 # donations_stream_url = "{0}{1}".format(STREAM_SERVER, '/donations/')
 # urllib2.Request()
