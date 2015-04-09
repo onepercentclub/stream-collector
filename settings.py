@@ -4,7 +4,10 @@ except ImportError:
     import sys
     sys.exit('secrets.py settings file not found. Please run `prepare.sh` to create one.')
 
+SERVER_URLS = (
+    "https://www.onepercentclub.com",
+    "https://crowdfunding.gent",
+    "https://hetluktons.nl"
+)
 
-ONEPERCENT_SERVER = "https://testing.onepercentclub.com"
-ONEPERCENT_SERVER = "http://localhost:8000"
-STREAM_SERVER = "http://stream.onepercentlive.com"
+STREAM_SERVER = "https://stream.onepercentclub.com"
